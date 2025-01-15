@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Antonio";
+    background: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+/* HEADER */
+
+.navbar {
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navbar h1 {
+    font-size: 1.6em;
+    letter-spacing: .8px;
+}
+
+.navbar .nav-tabs {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-tabs a {
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.navbar .account a {
+    font-size: 1.1em;
+    font-weight: 200;
+    letter-spacing: .51px;
+}
+
+/* HERO SECTION */
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90%;
+}
+
+.hero-sec .social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social .follow {
+    display: block;
+    height: fit-content;
+    color: white;
+    letter-spacing: 1.5px;
+    rotate: 90deg;
+    margin-bottom: 1.8em;
+    margin-left: .25em;
+}
+
+.social i {
+    margin: 3px 0;
+    cursor: pointer;
+}
+
+main .center-main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.center-main .heading-tag {
+    font-size: 1.9em;
+    letter-spacing: -1.9px;
+    color: #ffcd6f;
+}
+
+.center-main .main-tag {
+    color: white;
+    flex-wrap: nowrap;
+    font-size: 5em;
+    text-align: left;
+    font-family: "Archivo";
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.center-main button {
+    color: rosybrown;
+    padding: 1em 2em;
+    background-color: #ffd885;
+    border: none;
+    font-size: 1.5em;
+    margin: 1em 0;
+    cursor: pointer;
+}
+
+.center-main button:hover {
+    box-shadow: .8px 3px 7px #0c0a0a;
+}
+
+/* ABOUT */
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 4em;
+    background-color: #0B1D27;
+    margin: 0;
+    color: white;
+}
+
+.about-text-content,
+.transport-text-content,
+.travel-text-content {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.text-content {
+    width: 60%;
+    text-transform: capitalize;
+    margin: 0 auto;
+}
+
+.text-content .about .travel .transport {
+    font-size: 1.5em;
+    color: #ffcd6f;
+}
+
+.text-content h2 {
+    font-size: 2em;
+}
+
+
+.text-content .main-text {
+    width: fit-content;
+    font-size: 1.2em;
+    font-weight: 200;
+    color: white;
+}
+
+.img {
+    width: 50%;
+}
+
+.img img {
+    width: 80%;
+    border-radius: 100px 0 0 100px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about,
+.travel,
+.transport {
+    margin: 10px 0;
+}
+
+.read-more {
+    color: #ffcd6f;
+    text-transform: lowercase;
+    font-weight: 300;
+    font-size: .8em;
+    text-decoration: underline;
+}
+
