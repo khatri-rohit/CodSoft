@@ -12,6 +12,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
+
+    position: relative;
 }
 
 /* HEADER */
@@ -55,6 +57,7 @@ a {
 /* HERO SECTION */
 
 main {
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -64,7 +67,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 90%;
+    min-height: 90vh;
 }
 
 .hero-sec .social {
@@ -238,7 +241,7 @@ main .center-main {
     display: flex;
     flex-direction: row;
     padding: 5em 15em;
-    min-height: 70%;
+    min-height: 70vh;
     width: 100%;
     background-color: #0b1d27e7;
     color: white;
@@ -390,6 +393,7 @@ footer {
     background-color: #00121c;
     color: white;
     padding: 1em;
+    bottom: 0;
 }
 
 .menu {
