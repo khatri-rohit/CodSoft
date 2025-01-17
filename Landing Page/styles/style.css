@@ -42,7 +42,7 @@ a {
 }
 
 .nav-tabs a {
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 1px;
 }
 
@@ -55,7 +55,6 @@ a {
 /* HERO SECTION */
 
 main {
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -81,8 +80,9 @@ main {
     color: white;
     letter-spacing: 1.5px;
     rotate: 90deg;
-    margin-bottom: 1.8em;
+    margin-bottom: 2.1em;
     margin-left: .25em;
+    font-weight: 700;
 }
 
 .social i {
@@ -101,7 +101,7 @@ main .center-main {
 .center-main .heading-tag {
     font-size: 1.9em;
     letter-spacing: -1.9px;
-    color: #ffcd6f;
+    color: #fee8a3;
 }
 
 .center-main .main-tag {
@@ -115,17 +115,19 @@ main .center-main {
 }
 
 .center-main button {
-    color: rosybrown;
+    color: #d47676;
     padding: 1em 2em;
-    background-color: #ffd885;
+    background-color: #fee8a3;
     border: none;
     font-size: 1.5em;
     margin: 1em 0;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .center-main button:hover {
-    box-shadow: .8px 3px 7px #0c0a0a;
+    box-shadow: .8px 3px 7px #0c0a0ae3;
+    text-shadow: 2px 4px 4px #00000063;
 }
 
 /* ABOUT */
@@ -136,9 +138,12 @@ main .center-main {
     align-items: center;
     gap: 50px;
     padding: 4em;
-    background-color: #0B1D27;
-    margin: 0;
+    background-color: #0b1d27e7;
     color: white;
+}
+
+.about-sec {
+    margin-top: -1px;
 }
 
 .about-text-content,
@@ -157,7 +162,7 @@ main .center-main {
 
 .text-content .about .travel .transport {
     font-size: 1.5em;
-    color: #ffcd6f;
+    color: #fee8a3;
 }
 
 .text-content h2 {
@@ -191,7 +196,7 @@ main .center-main {
 }
 
 .read-more {
-    color: #ffcd6f;
+    color: #fee8a3;
     text-transform: lowercase;
     font-weight: 300;
     font-size: .8em;
@@ -214,7 +219,7 @@ main .center-main {
 
 .lets-go {
     margin: 10px 0;
-    background-color: wheat;
+    background-color: #fee8a3;
     color: #0B1D27;
     font-size: 1.2em;
     border: none;
@@ -232,11 +237,10 @@ main .center-main {
 .slide {
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
-    padding: 10em 20em;
-    min-height: 75%;
+    padding: 5em 15em;
+    min-height: 70%;
     width: 100%;
-    background-color: #0B1D27;
+    background-color: #0b1d27e7;
     color: white;
 }
 
@@ -257,18 +261,187 @@ main .center-main {
     border-radius: 10px;
     cursor: pointer;
     transition: ease-in-out 200ms;
+    box-shadow: 8px 5px 15px #00000088;
 }
 
 .slide-img img:hover {
     width: 120%;
     height: 110%;
-    margin-top: -30px;
+    margin-top: -1.15em;
 }
 
 .slide-img p {
     position: absolute;
-    left: 30%;
+    left: 25%;
     bottom: 20%;
     font-size: 1.8em;
     font-weight: 700;
+    text-shadow: 5px 8px 4px #000000f5;
+}
+
+/* WHY US */
+
+.why-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b1d27e7;
+    color: white;
+    padding: 1em 0;
+}
+
+.why-section>* {
+    width: 65%;
+    margin: .5em 0;
+    text-align: center;
+}
+
+.why-section h2 {
+    font-size: 2em;
+}
+
+.why-section p {
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+/*  */
+
+.services {
+    padding: 10em 18em;
+}
+
+.service,
+.icon,
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 13px;
+    text-align: center;
+}
+
+.icon i {
+    color: #fee8a3;
+    font-size: 4.5em;
+}
+
+.icon span {
+    color: #fee8a3;
+    font-size: 1.8em;
+    font-weight: 900;
+}
+
+.icon-text h3 {
+    font-size: 1.8em;
+}
+
+.icon-text p {
+    line-height: 1;
+}
+
+.ballon-background {
+    background-image: url("../img/ballon.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    object-fit: cover;
+
+    padding: 5em 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper-text {
+    text-align: center;
+    width: 40%;
+    color: white;
+}
+
+.upper-text h2 {
+    font-size: 2em;
+}
+
+.upper-text>* {
+    margin: .7em 0;
+}
+
+.upper-text button {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #665e26;
+    background-color: #fee8a3;
+    border: none;
+    padding: 1em 2em;
+    box-shadow: 3px 3px 8px #414141;
+}
+
+button {
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    background-color: #00121c;
+    color: white;
+    padding: 1em;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5em 10em;
+}
+
+.menus {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.col {
+    padding: 2em;
+}
+
+.mail {
+    border-bottom: solid white 1px;
+}
+
+input {
+    background: transparent;
+    border: none;
+    box-shadow: 1px 1px 1px white;
+}
+
+.mail button {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.col h3 {
+    margin: 1em 0;
+    color: #fee8a3;
+}
+
+.col-1 h3 {
+    color: #fff;
+}
+
+.drop-down>* {
+    margin: 1em 0;
+}
+
+.contact>* {
+    margin: .5em 0;
+}
+
+.footer>p {
+    text-align: center;
 }
