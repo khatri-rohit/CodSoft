@@ -1,10 +1,14 @@
 const inputElement = document.querySelector("input");
-const historyElement = document.querySelector(".history");
-const cancel = document.querySelector(".cancel");
+const historyElement = document.querySelector(".temp-history");
+const cancelBtn = document.querySelector(".cancel");
+const backspaceBtn = document.querySelector(".backspace");
+const btns = document.querySelectorAll(".num");
+const historyBtn = document.querySelector(".btn-his");
+const calhistory = document.querySelector(".all-history");
+const historys = document.querySelector(".historys");
 
 var queue;
 var FINALSUM;
-
 const calculator = (e) => {
     const inputValue = e.key;
     utility(inputValue);
@@ -18,27 +22,27 @@ function calulation() {
         case '+':
             FINALSUM += parseFloat(inputElement.value);
             inputElement.value = FINALSUM;
-            historyElement.textContent = "";
+            addHistory(inputElement.value);
             FINALSUM = 0;
             break;
 
         case '-':
             FINALSUM = FINALSUM - parseFloat(inputElement.value);
-            historyElement.textContent = "";
+            addHistory(inputElement.value);
             inputElement.value = FINALSUM;
             FINALSUM = 0;
             break;
 
         case '*':
             FINALSUM *= parseFloat(inputElement.value);
-            historyElement.textContent = "";
+            addHistory(inputElement.value);
             inputElement.value = FINALSUM;
             FINALSUM = 0;
             break;
 
         case '/':
             FINALSUM = FINALSUM / parseFloat(inputElement.value);
-            historyElement.textContent = "";
+            addHistory(inputElement.value);
             inputElement.value = FINALSUM;
             FINALSUM = 0;
             break;
@@ -55,15 +59,6 @@ function utility(inputValue) {
 
         console.log(value);
         switch (value) {
-
-            case "Backspace":
-                backspace();
-                break;
-
-            case "Delete":
-                clear()
-                break;
-
             case '+':
                 if (inputElement.value === "") {
                     if (queue === undefined) {
@@ -141,13 +136,20 @@ function utility(inputValue) {
                 calulation();
                 break;
 
-            case 'Enter':
+            case "Enter":
                 calulation();
+                break;
+
+            case "Backspace":
+                backspace();
+                break;
+
+            case "Delete":
+                clear();
                 break;
 
             default:
                 break;
-
         }
         if ((parseFloat(inputValue) >= 0 || parseFloat(inputValue) <= 9 || inputValue === '.') && inputElement.value === "0") {
             inputElement.value = value;
@@ -164,10 +166,10 @@ function utility(inputValue) {
 }
 
 const clear = () => {
+    FINALSUM = undefined;
+    queue = undefined;
     historyElement.textContent = "";
     inputElement.value = "";
-    FINALSUM = 0;
-    queue = 0;
 }
 
 const backspace = () => {
@@ -186,5 +188,34 @@ const backspace = () => {
     }
 }
 
-cancel.addEventListener("click", clear);
+btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        utility(btn.value);
+    })
+});
+
+historyBtn.addEventListener("click", () => {
+    const history = document.querySelectorAll(".history");
+    console.log(calhistory.style.display);
+    if (calhistory.style.display === "none") {
+        calhistory.style.display = "block";
+        if (history.length === 0) {
+            historys.innerHTML = `<p style="font-weight=800">No Calculation History</p>`;
+        }
+    } else {
+        calhistory.style.display = "none";
+    }
+})
+
+function addHistory(value) {
+    const create = document.createElement("p");
+    create.setAttribute("class", "history");
+    create.textContent = historyElement.textContent + " " + value + " = " + FINALSUM;
+    historys.appendChild(create);
+    console.log(historys);
+    historyElement.textContent = "";
+}
+
+cancelBtn.addEventListener("click", clear);
+backspaceBtn.addEventListener("click", backspace);
 window.addEventListener("keyup", calculator);
